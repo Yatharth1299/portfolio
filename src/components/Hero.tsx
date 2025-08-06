@@ -38,7 +38,7 @@ const Hero = () => {
             <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl neural-pulse">
               <img 
                 src={profileImage} 
-                alt="Yatharth Kashyap" 
+                alt="Yatharth - Profile Photo" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -48,7 +48,7 @@ const Hero = () => {
 
         {/* Name and Role */}
         <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent neural-gradient text-glow">
-          Yatharth Kashyap
+          Yatharth
         </h1>
         <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-8 animate-pulse-glow">
           Generative AI Engineer

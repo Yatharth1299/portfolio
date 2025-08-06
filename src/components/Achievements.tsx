@@ -14,7 +14,7 @@ const Achievements = () => {
       icon: Target,
       title: "AINCAT 2025 Rank",
       value: "17343",
-      description: "National level AI competency assessment ranking",
+      description: "All India Naukri Campus Aptitude Test ranking",
       color: "accent",
       category: "Competition"
     },

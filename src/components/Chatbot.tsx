@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MessageCircle, X, Send, Bot, User } from "lucide-react";
+import { MessageCircle, X, Send, User } from "lucide-react";
+import robotIcon from "@/assets/robot-icon.png";
 
 interface Message {
   id: number;
@@ -80,7 +81,7 @@ const Chatbot = () => {
     }
     
     if (message.includes("hello") || message.includes("hi") || message.includes("hey")) {
-      return "Hello! I'm here to help you learn more about Yatharth Kashyap. You can ask me about his skills, projects, education, certifications, achievements, or how to contact him. What interests you most?";
+      return "Hello! I'm here to help you learn more about Yatharth. You can ask me about his skills, projects, education, certifications, achievements, or how to contact him. What interests you most?";
     }
     
     if (message.includes("ai") || message.includes("artificial intelligence") || message.includes("machine learning")) {
@@ -155,7 +156,7 @@ const Chatbot = () => {
             <div className="p-4 border-b border-white/10 bg-gradient-to-r from-primary/20 to-accent/20">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center">
-                  <Bot className="h-5 w-5 text-primary" />
+                  <img src={robotIcon} alt="AI Robot" className="h-5 w-5" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">AI Assistant</h3>
@@ -173,7 +174,7 @@ const Chatbot = () => {
                 >
                   {!message.isUser && (
                     <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Bot className="h-3 w-3 text-primary" />
+                      <img src={robotIcon} alt="AI Robot" className="h-3 w-3" />
                     </div>
                   )}
                   
@@ -198,7 +199,7 @@ const Chatbot = () => {
               {isTyping && (
                 <div className="flex gap-2 justify-start">
                   <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1">
-                    <Bot className="h-3 w-3 text-primary" />
+                    <img src={robotIcon} alt="AI Robot" className="h-3 w-3" />
                   </div>
                   <div className="bg-white/10 p-3 rounded-lg">
                     <div className="flex gap-1">

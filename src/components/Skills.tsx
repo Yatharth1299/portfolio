@@ -98,9 +98,9 @@ const Skills = () => {
         {/* Skills Visualization */}
         <div className="mt-16 text-center">
           <div className="glass-card p-8 rounded-xl max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-primary">Tech Stack Highlights</h3>
+            <h3 className="text-2xl font-bold mb-6 text-primary">Core Specializations</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Python", "LangChain", "PyTorch", "Streamlit", "Ollama", "OpenAI", "CREWAI"].map((tech, index) => (
+              {["Automation", "AI Agent", "RAG"].map((tech, index) => (
                 <span 
                   key={tech}
                   className="px-4 py-2 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full text-sm font-medium border border-primary/30 hover:scale-110 transition-transform duration-200 cursor-pointer"

@@ -10,12 +10,21 @@ import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background overflow-x-hidden relative">
+      {/* Solar System Animation */}
+      <div className="solar-system">
+        <div className="solar-sun"></div>
+        <div className="solar-planet solar-planet-1"></div>
+        <div className="solar-planet solar-planet-2"></div>
+        <div className="solar-planet solar-planet-3"></div>
+        <div className="solar-planet solar-planet-4"></div>
+      </div>
+
       {/* Navigation */}
       <Navigation />
 
       {/* Main Content */}
-      <main>
+      <main className="relative z-10">
         {/* Hero Section */}
         <section id="hero">
           <Hero />

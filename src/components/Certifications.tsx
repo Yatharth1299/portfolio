@@ -9,7 +9,7 @@ const Certifications = () => {
       type: "AI/ML",
       color: "primary",
       verified: true,
-      link: "#"
+      link: "https://www.credly.com/badges/438e584b-f8b6-4bcd-9890-6f7cad29ecc6"
     },
     {
       title: "Introduction to MongoDB",
@@ -17,7 +17,7 @@ const Certifications = () => {
       type: "Database",
       color: "secondary",
       verified: true,
-      link: "#"
+      link: "https://learn.mongodb.com/c/s3LnauFcSLGsXojhnop6zg"
     },
     {
       title: "Generative AI Internship Certificate",
@@ -25,7 +25,7 @@ const Certifications = () => {
       type: "Internship",
       color: "accent",
       verified: true,
-      link: "#"
+      link: "https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=5098b7a45f16186b64b8f9fedda1792d"
     },
     {
       title: "Introduction to Artificial Intelligence",
@@ -33,7 +33,7 @@ const Certifications = () => {
       type: "AI/ML",
       color: "primary",
       verified: true,
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/verify/HHFXFP7YO1TO"
     },
     {
       title: "Python Programming",
@@ -41,7 +41,7 @@ const Certifications = () => {
       type: "Programming",
       color: "secondary",
       verified: true,
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/verify/4EGY5OTT6CPK"
     },
     {
       title: "AWS Certified Solutions Architect",
@@ -49,7 +49,7 @@ const Certifications = () => {
       type: "Cloud",
       color: "accent",
       verified: true,
-      link: "#"
+      link: "https://www.udemy.com/certificate/UC-d317230a-93fd-4d6a-9698-5c16124a76ad/"
     }
   ];
 
@@ -59,7 +59,7 @@ const Certifications = () => {
       description: "Public Profile with comprehensive cloud computing expertise",
       icon: Star,
       color: "primary",
-      link: "#"
+      link: "https://www.cloudskillsboost.google/public_profiles/501f7b2c-1b85-4823-a4c8-40afdddd7b74"
     }
   ];
 

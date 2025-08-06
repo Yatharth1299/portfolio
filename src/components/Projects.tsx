@@ -22,7 +22,7 @@ const Projects = () => {
       color: "accent",
       tags: ["CREWAI", "LangChain", "Ollama", "Streamlit"],
       impact: "80% reduction in planning time",
-      github: "#",
+      github: "https://github.com/Yatharth1299/AI-Powered-Trip-Planner-by-multi-agents-system",
       demo: "#"
     },
     {
@@ -33,7 +33,7 @@ const Projects = () => {
       color: "secondary",
       tags: ["RAG", "FAISS", "LangChain", "Vector DB"],
       impact: "Intelligent document querying",
-      github: "#",
+      github: "https://github.com/Yatharth1299/AI_chatbot",
       demo: "#"
     },
     {
@@ -44,7 +44,7 @@ const Projects = () => {
       color: "primary",
       tags: ["Random Forest", "XGBoost", "SMOTE", "Streamlit"],
       impact: "98% precision achieved",
-      github: "#",
+      github: "https://github.com/Yatharth1299/CreditCard_Fraud_Detection",
       demo: "#"
     }
   ];
@@ -148,19 +148,11 @@ const Projects = () => {
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className={`flex-1 ${colors.border} hover:bg-white/10 transition-all duration-300 group/btn`}
+                    className={`w-full ${colors.border} hover:bg-white/10 transition-all duration-300 group/btn`}
                     onClick={() => window.open(project.github, '_blank')}
                   >
                     <Github className="h-4 w-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
                     View Code
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    className={`flex-1 bg-gradient-to-r from-${project.color} to-${project.color}/80 hover:from-${project.color}/90 hover:to-${project.color}/70 transition-all duration-300 group/btn`}
-                    onClick={() => window.open(project.demo, '_blank')}
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:translate-x-1 transition-transform" />
-                    Live Demo
                   </Button>
                 </div>
 

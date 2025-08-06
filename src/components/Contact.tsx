@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,31 +21,44 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      // Save to Supabase
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject || "Portfolio Contact",
+            message: formData.message
+          }
+        ]);
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
-    const body = encodeURIComponent(
-      `Hi Yatharth,\n\n${formData.message}\n\nBest regards,\n${formData.name}\n${formData.email}`
-    );
-    const mailtoLink = `mailto:yatharthkashyap1488@gmail.com?subject=${subject}&body=${body}`;
-    
-    window.open(mailtoLink, '_blank');
+      if (error) {
+        throw error;
+      }
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    toast({
-      title: "Message Sent!",
-      description: "Your email client has been opened. Thank you for reaching out!",
-    });
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      
+      toast({
+        title: "Message Sent!",
+        description: "Your message has been received. I'll get back to you soon!",
+      });
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 3000);
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      }, 3000);
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -138,19 +152,6 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Quick Stats */}
-              <div className="mt-8 pt-8 border-t border-white/10">
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-primary">24h</div>
-                    <div className="text-sm text-muted-foreground">Response Time</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-secondary">100%</div>
-                    <div className="text-sm text-muted-foreground">Collaboration Rate</div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Additional Info */}
