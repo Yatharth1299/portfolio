@@ -17,7 +17,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "M hmesa takatvar logo ki madat krta hu so... what do you want to know about Yatharth its Skills, projects, education, certifications, achievements, contact, experience. ",
+      text: "M hmesa takatvar logo ki madat krta hu so... I'm Yatharth's assistant .. Hi 👋. ",
       isUser: false,
       timestamp: new Date()
     }
