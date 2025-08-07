@@ -17,7 +17,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "hy!! its me BURI BURI ZAEMON how can i help you",
+      text: "hy!! its me BURI BURI ZAEMON Yatarth's assistant how can i help you",
       isUser: false,
       timestamp: new Date()
     }
