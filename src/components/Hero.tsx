@@ -78,7 +78,7 @@ const Hero = () => {
           <Button 
             onClick={handleDownloadResume}
             size="lg" 
-            className="glass-card neon-glow group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-primary to-accent border-primary/50 hover:border-primary transition-all duration-300 text-white hover:text-white"
+            className="glass-card neon-glow group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-primary to-accent border-primary/50 hover:border-primary transition-all duration-300 text-foreground hover:text-foreground"
           >
             <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
             Download Resume
