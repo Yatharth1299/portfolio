@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MessageCircle, X, Send, User } from "lucide-react";
-import robotIcon from "@/assets/robot-icon.png";
+const buriIcon = "/lovable-uploads/fc18a0e5-6f8e-407c-8679-2bc1a5d48200.png";
 
 interface Message {
   id: number;
@@ -17,7 +17,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hey I am Buri Buri Zaemon! I can help you learn more about Yatharth's skills, projects, and experience. What would you like to know?",
+      text: "hy!! its me BURI BURI ZAEMON how can i help you",
       isUser: false,
       timestamp: new Date()
     }
@@ -138,7 +138,7 @@ const Chatbot = () => {
       {showPopup && !isOpen && (
         <div className="fixed bottom-24 right-6 z-50 bg-background border border-border rounded-lg p-3 shadow-lg max-w-xs animate-bounce">
           <div className="flex justify-between items-start">
-            <p className="text-sm text-foreground">Hey I am Buri Buri Zaemon!</p>
+            <p className="text-sm text-foreground">hy!! its me BURI BURI ZAEMON how can i help you</p>
             <button 
               onClick={() => setShowPopup(false)}
               className="text-muted-foreground hover:text-foreground ml-2"
@@ -162,7 +162,7 @@ const Chatbot = () => {
           {isOpen ? (
             <X className="h-6 w-6 group-hover:rotate-90 transition-transform duration-300" />
           ) : (
-            <img src={robotIcon} alt="Buri Buri Zaemon" className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+            <img src={buriIcon} alt="Buri Buri Zaemon" className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
           )}
         </Button>
       </div>
@@ -175,7 +175,7 @@ const Chatbot = () => {
             <div className="p-4 border-b border-white/10 bg-gradient-to-r from-primary/20 to-accent/20">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center">
-                  <img src={robotIcon} alt="AI Robot" className="h-5 w-5" />
+                  <img src={buriIcon} alt="Buri Buri Zaemon" className="h-5 w-5" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Buri Buri Zaemon</h3>
@@ -193,7 +193,7 @@ const Chatbot = () => {
                 >
                   {!message.isUser && (
                     <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1">
-                      <img src={robotIcon} alt="AI Robot" className="h-3 w-3" />
+                     <img src={buriIcon} alt="Buri Buri Zaemon" className="h-3 w-3" />
                     </div>
                   )}
                   
@@ -218,7 +218,7 @@ const Chatbot = () => {
               {isTyping && (
                 <div className="flex gap-2 justify-start">
                   <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1">
-                    <img src={robotIcon} alt="AI Robot" className="h-3 w-3" />
+                    <img src={buriIcon} alt="Buri Buri Zaemon" className="h-3 w-3" />
                   </div>
                   <div className="bg-white/10 p-3 rounded-lg">
                     <div className="flex gap-1">
