@@ -138,7 +138,7 @@ const Chatbot = () => {
       {showPopup && !isOpen && (
         <div className="fixed bottom-24 right-6 z-50 bg-background border border-border rounded-lg p-3 shadow-lg max-w-xs animate-bounce">
           <div className="flex justify-between items-start">
-            <p className="text-sm text-foreground">hy!! its me BURI BURI ZAEMON how can i help you</p>
+            <p className="text-sm text-foreground">hy!! its me BURI BURI ZAEMON tap me to chat</p>
             <button 
               onClick={() => setShowPopup(false)}
               className="text-muted-foreground hover:text-foreground ml-2"
