@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download, MessageCircle } from "lucide-react";
-import profileImage from "@/assets/yatharth-profile.jpg";
+import profileImage from "/lovable-uploads/3c45344f-2227-4ffb-8d8f-bcf2fd8cad29.png";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -78,7 +78,7 @@ const Hero = () => {
           <Button 
             onClick={handleDownloadResume}
             size="lg" 
-            className="glass-card neon-glow group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-primary to-accent border-primary/50 hover:border-primary transition-all duration-300 text-white"
+            className="glass-card neon-glow group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-primary to-accent border-primary/50 hover:border-primary transition-all duration-300 text-primary-foreground hover:text-primary-foreground"
           >
             <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
             Download Resume

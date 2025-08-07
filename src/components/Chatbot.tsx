@@ -13,10 +13,11 @@ interface Message {
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hi! I'm Yatharth's AI assistant. I can help you learn more about his skills, projects, and experience. What would you like to know?",
+      text: "Hey I am Buri Buri Zaemon! I can help you learn more about Yatharth's skills, projects, and experience. What would you like to know?",
       isUser: false,
       timestamp: new Date()
     }
@@ -133,17 +134,35 @@ const Chatbot = () => {
 
   return (
     <>
+      {/* Popup Message */}
+      {showPopup && !isOpen && (
+        <div className="fixed bottom-24 right-6 z-50 bg-background border border-border rounded-lg p-3 shadow-lg max-w-xs animate-bounce">
+          <div className="flex justify-between items-start">
+            <p className="text-sm text-foreground">Hey I am Buri Buri Zaemon!</p>
+            <button 
+              onClick={() => setShowPopup(false)}
+              className="text-muted-foreground hover:text-foreground ml-2"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Chat Toggle Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {
+            setIsOpen(!isOpen);
+            setShowPopup(false);
+          }}
           size="lg"
           className="w-14 h-14 rounded-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg neon-glow group"
         >
           {isOpen ? (
             <X className="h-6 w-6 group-hover:rotate-90 transition-transform duration-300" />
           ) : (
-            <MessageCircle className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+            <img src={robotIcon} alt="Buri Buri Zaemon" className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
           )}
         </Button>
       </div>
@@ -159,7 +178,7 @@ const Chatbot = () => {
                   <img src={robotIcon} alt="AI Robot" className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">AI Assistant</h3>
+                  <h3 className="font-semibold text-foreground">Buri Buri Zaemon</h3>
                   <p className="text-xs text-muted-foreground">Ask about Yatharth's portfolio</p>
                 </div>
               </div>
