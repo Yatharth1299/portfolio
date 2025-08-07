@@ -47,7 +47,7 @@ const Hero = () => {
         </div>
 
         {/* Name and Role */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent neural-gradient text-glow">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent neural-gradient text-glow" style={{ color: 'transparent', backgroundClip: 'text', WebkitBackgroundClip: 'text' }}>
           Yatharth
         </h1>
         <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-8 animate-pulse-glow">
@@ -56,14 +56,20 @@ const Hero = () => {
 
         {/* Professional Summary */}
         <div className="max-w-4xl mx-auto mb-8">
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-lg md:text-xl text-foreground leading-relaxed">
             Final-year B.Tech (CSE) student with a strong passion for{" "}
             <span className="text-primary font-semibold">Artificial Intelligence</span> and{" "}
             <span className="text-secondary font-semibold">Machine Learning</span>. 
-            Adept in Python, LLM tools, and multi-agent architectures. Proven experience in building 
-            intelligent applications using{" "}
-            <span className="text-accent font-semibold">LangChain, Ollama, Hugging Face, CREWAI, n8n</span>, and Streamlit. 
-            Known for rapid prototyping, model optimization, and real-world AI solutions.
+            Skilled in developing intelligent systems with a focus on{" "}
+            <span className="text-accent font-semibold">prompt engineering</span>,{" "}
+            <span className="text-primary font-semibold">multi-agent architectures</span>, and{" "}
+            <span className="text-secondary font-semibold">large language models</span>. 
+            Experienced in designing and optimizing real-world AI solutions, including{" "}
+            <span className="text-accent font-semibold">chatbots</span>,{" "}
+            <span className="text-primary font-semibold">virtual assistants</span>, and{" "}
+            <span className="text-secondary font-semibold">automated planning systems</span>. 
+            Known for rapid prototyping, performance tuning, and applying innovative approaches to solve complex problems efficiently. 
+            Strong communicator and team player with a keen interest in turning cutting-edge research into impactful applications.
           </p>
         </div>
 
@@ -72,13 +78,18 @@ const Hero = () => {
           <Button 
             onClick={handleDownloadResume}
             size="lg" 
-            className="glass-card neon-glow group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-primary to-accent border-primary/50 hover:border-primary transition-all duration-300"
+            className="glass-card neon-glow group px-8 py-4 text-lg font-semibold bg-gradient-to-r from-primary to-accent border-primary/50 hover:border-primary transition-all duration-300 text-white"
           >
             <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
             Download Resume
           </Button>
           <Button 
-            onClick={handleReachOut}
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             variant="outline" 
             size="lg" 
             className="glass-card neon-glow group px-8 py-4 text-lg font-semibold border-secondary/50 hover:border-secondary transition-all duration-300"

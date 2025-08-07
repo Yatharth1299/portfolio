@@ -10,13 +10,13 @@ const Skills = () => {
     },
     {
       icon: Database,
-      title: "Libraries",
+      title: "Libraries & Framework",
       color: "secondary",
       skills: ["Pandas", "NumPy", "Matplotlib", "Scikit-learn", "PyTorch"]
     },
     {
       icon: Brain,
-      title: "AI Tools",
+      title: "AI/LLM Tools",
       color: "accent",
       skills: ["LangChain", "Hugging Face", "Ollama", "DeepSeek", "OpenAI", "CREWAI", "n8n"]
     },

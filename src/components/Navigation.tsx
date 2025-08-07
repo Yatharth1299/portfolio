@@ -61,7 +61,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div 
-              className="text-xl font-bold bg-clip-text text-transparent neural-gradient cursor-pointer"
+              className="text-xl font-bold text-primary cursor-pointer hover:text-primary/80 transition-colors"
               onClick={() => scrollToSection('hero')}
             >
               Yatharth.AI

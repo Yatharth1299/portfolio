@@ -123,11 +123,11 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="glass-card p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-6 text-primary">Get In Touch</h3>
+            <div className="glass-card p-6 lg:p-8 rounded-xl">
+              <h3 className="text-xl lg:text-2xl font-bold mb-6 text-primary">Get In Touch</h3>
               
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -166,8 +166,8 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="glass-card p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-6 text-accent">Send Message</h3>
+          <div className="glass-card p-6 lg:p-8 rounded-xl">
+            <h3 className="text-xl lg:text-2xl font-bold mb-6 text-accent">Send Message</h3>
             
             {isSubmitted ? (
               <div className="text-center py-12">
