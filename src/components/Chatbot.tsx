@@ -166,9 +166,15 @@ const Chatbot = () => {
               <img 
                 src={buriIcon} 
                 alt="Buri Buri Zaemon" 
-                className="h-8 w-8 rounded-full object-cover group-hover:scale-110 transition-transform duration-300" 
+                className="h-10 w-10 rounded-full object-cover group-hover:scale-110 transition-transform duration-300" 
               />
-              <MessageCircle className="absolute -bottom-1 -right-1 h-4 w-4 bg-secondary text-secondary-foreground rounded-full p-0.5" />
+              <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 bg-secondary rounded-full border-2 border-background flex items-center justify-center overflow-hidden group-hover:scale-125 transition-transform duration-300">
+                <img 
+                  src={buriIcon} 
+                  alt="Chat" 
+                  className="h-3 w-3 rounded-full object-cover" 
+                />
+              </div>
             </div>
           )}
         </Button>
