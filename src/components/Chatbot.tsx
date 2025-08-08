@@ -172,7 +172,7 @@ const Chatbot = () => {
                 <img 
                   src={buriIcon} 
                   alt="Chat" 
-                  className="h-9 w-9 rounded-full object-cover transform translate-x-0.5 -translate-y-0.5" 
+                  className="h-9 w-9 rounded-full object-cover transform translate-x-3 -translate-y-0.5" 
                 />
               </div>
             </div>
