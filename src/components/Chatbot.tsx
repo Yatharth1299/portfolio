@@ -172,7 +172,7 @@ const Chatbot = () => {
                 <img 
                   src={buriIcon} 
                   alt="Chat" 
-                  className="h-9 w-9 rounded-full object-cover transform translate-x-3 -translate-y-0.5" 
+                  className="h-9 w-9 rounded-full object-cover transform translate-x-0.5 -translate-y-0.5" 
                 />
               </div>
             </div>
@@ -182,7 +182,7 @@ const Chatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 h-96 z-50">
+        <div className="fixed bottom-15 right-6 w-50 h-96 z-50">
           <div className="glass-card rounded-xl shadow-2xl border border-white/20 h-full flex flex-col overflow-hidden">
             {/* Header */}
             <div className="p-4 border-b border-white/10 bg-gradient-to-r from-primary/20 to-accent/20">
