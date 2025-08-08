@@ -136,7 +136,7 @@ const Chatbot = () => {
     <>
       {/* Popup Message */}
       {showPopup && !isOpen && (
-        <div className="fixed bottom-18 right-4 z-50 bg-background border border-border rounded-lg p-3 shadow-lg max-w-xs animate-bounce">
+        <div className="fixed bottom-24 right-4 z-50 bg-background border border-border rounded-lg p-3 shadow-lg max-w-xs animate-bounce">
           <div className="flex justify-between items-start">
             <p className="text-sm text-foreground">hy!! its me BURI BURI ZAEMON tap me to chat</p>
             <button 
@@ -182,7 +182,7 @@ const Chatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-15 right-6 w-50 h-96 z-50">
+        <div className="fixed bottom-20 right-6 w-80 h-96 z-50">
           <div className="glass-card rounded-xl shadow-2xl border border-white/20 h-full flex flex-col overflow-hidden">
             {/* Header */}
             <div className="p-4 border-b border-white/10 bg-gradient-to-r from-primary/20 to-accent/20">
