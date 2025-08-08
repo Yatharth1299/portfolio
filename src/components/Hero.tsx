@@ -11,11 +11,8 @@ const Hero = () => {
   }, []);
 
   const handleDownloadResume = () => {
-    // Create a link to download resume
-    const link = document.createElement('a');
-    link.href = '/resume-yatharth-kashyap.pdf'; // You can add the actual resume file to public folder
-    link.download = 'Yatharth_Kashyap_Resume.pdf';
-    link.click();
+    // Open Google Drive resume link
+    window.open('https://drive.google.com/file/d/16NSxAS-8Z0OrLbh0VoOEWBOH4bKL4L1P/view?usp=sharing', '_blank');
   };
 
   const handleReachOut = () => {
