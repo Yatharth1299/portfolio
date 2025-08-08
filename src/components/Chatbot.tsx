@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MessageCircle, X, Send, User } from "lucide-react";
-const buriIcon = "/lovable-uploads/00f6943d-eb4d-4664-8471-b93a3ca51840.png";
+const buriIcon = "/lovable-uploads/bb4adc58-e102-411d-8f24-1a9407529348.png";
 
 interface Message {
   id: number;
