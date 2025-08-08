@@ -157,12 +157,19 @@ const Chatbot = () => {
             setShowPopup(false);
           }}
           size="lg"
-          className="w-14 h-14 rounded-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg neon-glow group"
+          className="w-14 h-14 rounded-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg neon-glow group relative overflow-hidden"
         >
           {isOpen ? (
             <X className="h-6 w-6 group-hover:rotate-90 transition-transform duration-300" />
           ) : (
-            <img src={buriIcon} alt="Buri Buri Zaemon" className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+            <div className="relative w-full h-full flex items-center justify-center">
+              <img 
+                src={buriIcon} 
+                alt="Buri Buri Zaemon" 
+                className="h-8 w-8 rounded-full object-cover group-hover:scale-110 transition-transform duration-300" 
+              />
+              <MessageCircle className="absolute -bottom-1 -right-1 h-4 w-4 bg-secondary text-secondary-foreground rounded-full p-0.5" />
+            </div>
           )}
         </Button>
       </div>
@@ -174,8 +181,8 @@ const Chatbot = () => {
             {/* Header */}
             <div className="p-4 border-b border-white/10 bg-gradient-to-r from-primary/20 to-accent/20">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center">
-                  <img src={buriIcon} alt="Buri Buri Zaemon" className="h-5 w-5" />
+                <div className="w-8 h-8 rounded-full bg-primary/30 flex items-center justify-center overflow-hidden">
+                  <img src={buriIcon} alt="Buri Buri Zaemon" className="h-6 w-6 rounded-full object-cover" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Buri Buri Zaemon</h3>
@@ -192,9 +199,9 @@ const Chatbot = () => {
                   className={`flex gap-2 ${message.isUser ? 'justify-end' : 'justify-start'}`}
                 >
                   {!message.isUser && (
-                    <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1">
-                     <img src={buriIcon} alt="Buri Buri Zaemon" className="h-3 w-3" />
-                    </div>
+                     <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1 overflow-hidden">
+                      <img src={buriIcon} alt="Buri Buri Zaemon" className="h-4 w-4 rounded-full object-cover" />
+                     </div>
                   )}
                   
                   <div
@@ -217,9 +224,9 @@ const Chatbot = () => {
               
               {isTyping && (
                 <div className="flex gap-2 justify-start">
-                  <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1">
-                    <img src={buriIcon} alt="Buri Buri Zaemon" className="h-3 w-3" />
-                  </div>
+                   <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1 overflow-hidden">
+                     <img src={buriIcon} alt="Buri Buri Zaemon" className="h-4 w-4 rounded-full object-cover" />
+                   </div>
                   <div className="bg-white/10 p-3 rounded-lg">
                     <div className="flex gap-1">
                       <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
