@@ -174,7 +174,7 @@ const Chatbot = () => {
               alt="Buri Buri Zaemon" 
               className="h-10 w-10 rounded-full object-cover group-hover:scale-110 transition-transform duration-300 border-2 border-white/30" 
             />
-            <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary/90 backdrop-blur-sm rounded-full border-2 border-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+            <div className="absolute -top-2 -right-2 w-10 h-10 bg-primary/90 backdrop-blur-sm rounded-full border-2 border-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
               <MessageCircle className="h-8 w-8 text-white" />
             </div>
           </div>
