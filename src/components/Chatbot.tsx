@@ -173,7 +173,7 @@ const Chatbot = () => {
         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/30 via-transparent to-white/20 animate-pulse"></div>
         
         {isOpen ? (
-          <X className="h-13 w-13 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
+          <X className="h-5 w-5 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
         ) : (
           <div className="relative z-10 w-full h-full flex items-center justify-center">
             <img 
