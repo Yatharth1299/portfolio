@@ -115,17 +115,19 @@
   }
   
   .neon-glow {
-    @apply transition-all duration-300;
-    box-shadow: var(--glow-blue);
+    @apply transition-all duration-500;
+    animation: multi-glow 4s ease-in-out infinite;
   }
   
   .neon-glow:hover {
-    box-shadow: var(--glow-violet);
-    transform: translateY(-2px);
+    animation: multi-glow 2s ease-in-out infinite;
+    transform: translateY(-3px) scale(1.05);
   }
   
   .neural-gradient {
-    background: var(--gradient-neural);
+    background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--primary)));
+    background-size: 300% 300%;
+    animation: rainbow-shine 3s ease-in-out infinite;
   }
   
   .ai-gradient {
@@ -186,6 +188,50 @@
   50% {
     box-shadow: 0 0 25px hsl(var(--accent) / 0.8), 0 0 35px hsl(var(--accent) / 0.3);
     transform: scale(1.02);
+  }
+}
+
+@keyframes rainbow-shine {
+  0% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg) brightness(1.2);
+  }
+  25% { 
+    background-position: 50% 100%;
+    filter: hue-rotate(90deg) brightness(1.4);
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(180deg) brightness(1.6);
+  }
+  75% { 
+    background-position: 50% 0%;
+    filter: hue-rotate(270deg) brightness(1.4);
+  }
+  100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(360deg) brightness(1.2);
+  }
+}
+
+@keyframes multi-glow {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.6),
+      0 0 40px hsl(var(--secondary) / 0.4),
+      0 0 60px hsl(var(--accent) / 0.3);
+  }
+  33% { 
+    box-shadow: 
+      0 0 30px hsl(var(--secondary) / 0.6),
+      0 0 50px hsl(var(--accent) / 0.4),
+      0 0 70px hsl(var(--primary) / 0.3);
+  }
+  66% { 
+    box-shadow: 
+      0 0 25px hsl(var(--accent) / 0.6),
+      0 0 45px hsl(var(--primary) / 0.4),
+      0 0 65px hsl(var(--secondary) / 0.3);
   }
 }
 

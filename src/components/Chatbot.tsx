@@ -163,19 +163,26 @@ const Chatbot = () => {
       <Button
         onClick={toggleChat}
         size="lg"
-        className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+        className="w-14 h-14 rounded-full relative overflow-hidden group neural-gradient animate-float neon-glow"
       >
+        {/* Animated rainbow background */}
+        <div className="absolute inset-0 rounded-full neural-gradient opacity-80 animate-spin" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent opacity-60 animate-pulse"></div>
+        
+        {/* Shining overlay */}
+        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/30 via-transparent to-white/20 animate-pulse"></div>
+        
         {isOpen ? (
-          <X className="h-6 w-6 text-foreground group-hover:rotate-90 transition-transform duration-300" />
+          <X className="h-6 w-6 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
         ) : (
-          <div className="relative w-full h-full flex items-center justify-center">
+          <div className="relative z-10 w-full h-full flex items-center justify-center">
             <img 
               src={buriIcon} 
               alt="Buri Buri Zaemon" 
-              className="h-10 w-10 rounded-full object-cover group-hover:scale-110 transition-transform duration-300 border-2 border-white/30" 
+              className="h-8 w-8 rounded-full object-cover group-hover:scale-110 transition-transform duration-300 border-2 border-white/50 shadow-lg" 
             />
-            <div className="absolute -top--3 -right--3 w-14 h-14 bg-primary/90 backdrop-blur-sm rounded-full border-2 border-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-              <MessageCircle className="h-8 w-8 text-white" />
+            <div className="absolute -top-1 -right-1 w-12 h-12 bg-gradient-to-r from-primary to-secondary backdrop-blur-sm rounded-full border-2 border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl animate-pulse-glow">
+              <MessageCircle className="h-8 w-8 text-white drop-shadow-lg animate-bounce" style={{ animationDuration: '2s' }} />
             </div>
           </div>
         )}
