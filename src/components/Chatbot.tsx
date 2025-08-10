@@ -163,7 +163,7 @@ const Chatbot = () => {
       <Button
         onClick={toggleChat}
         size="lg"
-        className="w-10 h-10 rounded-full relative overflow-hidden group neural-gradient animate-float neon-glow"
+        className="w-14 h-14 rounded-full relative overflow-hidden group neural-gradient animate-float neon-glow"
       >
         {/* Animated rainbow background */}
         <div className="absolute inset-0 rounded-full neural-gradient opacity-80 animate-spin" style={{ animationDuration: '3s' }}></div>
@@ -173,7 +173,7 @@ const Chatbot = () => {
         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/30 via-transparent to-white/20 animate-pulse"></div>
         
         {isOpen ? (
-          <X className="h-6 w-6 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
+          <X className="h-8 w-8 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
         ) : (
           <div className="relative z-10 w-full h-full flex items-center justify-center">
             <img 
