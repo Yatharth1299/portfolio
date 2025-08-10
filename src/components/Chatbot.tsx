@@ -173,7 +173,7 @@ const Chatbot = () => {
         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/30 via-transparent to-white/20 animate-pulse"></div>
         
         {isOpen ? (
-          <X className="h-8 w-8 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
+          <X className="h-13 w-13 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
         ) : (
           <div className="relative z-10 w-full h-full flex items-center justify-center">
             <img 
@@ -190,7 +190,7 @@ const Chatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="absolute bottom-16 right-0 w-90 h-100">
+        <div className="absolute bottom-16 right-0 w-80 h-96">
           <div className="glass-card rounded-xl shadow-2xl border border-white/20 h-full flex flex-col overflow-hidden">
             {/* Chat Header */}
             <div className="p-4 border-b border-white/10 bg-gradient-to-r from-primary/20 to-accent/20">
