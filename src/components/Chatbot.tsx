@@ -190,7 +190,7 @@ const Chatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="absolute bottom-16 right-0 w-80 h-96">
+        <div className="absolute bottom-16 right-0 w-90 h-100">
           <div className="glass-card rounded-xl shadow-2xl border border-white/20 h-full flex flex-col overflow-hidden">
             {/* Chat Header */}
             <div className="p-4 border-b border-white/10 bg-gradient-to-r from-primary/20 to-accent/20">
