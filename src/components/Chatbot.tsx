@@ -172,10 +172,10 @@ const Chatbot = () => {
             <img 
               src={buriIcon} 
               alt="Buri Buri Zaemon" 
-              className="h-12 w-12 rounded-full object-cover group-hover:scale-110 transition-transform duration-300 border-2 border-white/30" 
+              className="h-10 w-10 rounded-full object-cover group-hover:scale-110 transition-transform duration-300 border-2 border-white/30" 
             />
-            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-primary/90 backdrop-blur-sm rounded-full border-2 border-white flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
-              <MessageCircle className="h-3 w-3 text-white" />
+            <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary/90 backdrop-blur-sm rounded-full border-2 border-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <MessageCircle className="h-8 w-8 text-white" />
             </div>
           </div>
         )}
