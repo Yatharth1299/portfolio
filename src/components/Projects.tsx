@@ -145,15 +145,17 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className={`w-full ${colors.border} hover:bg-white/10 transition-all duration-300 group/btn`}
-                    onClick={() => window.open(project.github, '_blank')}
-                  >
-                    <Github className="h-4 w-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
-                    View Code
-                  </Button>
+                  {project.title !== "AI-Powered Email Responder Agent" && (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className={`w-full ${colors.border} hover:bg-white/10 transition-all duration-300 group/btn`}
+                      onClick={() => window.open(project.github, '_blank')}
+                    >
+                      <Github className="h-4 w-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
+                      View Code
+                    </Button>
+                  )}
                 </div>
 
                 {/* Decorative Elements */}

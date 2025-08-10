@@ -125,9 +125,9 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="glass-card p-6 lg:p-8 rounded-xl">
-              <h3 className="text-xl lg:text-2xl font-bold mb-6 text-primary">Get In Touch</h3>
+          <div className="space-y-6 lg:space-y-8">
+            <div className="glass-card p-4 sm:p-6 lg:p-8 rounded-xl">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 lg:mb-6 text-primary">Get In Touch</h3>
               
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -155,9 +155,9 @@ const Contact = () => {
             </div>
 
             {/* Additional Info */}
-            <div className="glass-card p-6 rounded-xl">
-              <h4 className="font-bold text-accent mb-3">Open to Opportunities</h4>
-              <p className="text-sm text-muted-foreground">
+            <div className="glass-card p-4 sm:p-6 rounded-xl">
+              <h4 className="text-sm sm:text-base font-bold text-accent mb-2 sm:mb-3">Open to Opportunities</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 I'm actively seeking roles in <strong>Generative AI Engineering</strong>, 
                 <strong> AI Research</strong>, and <strong>Machine Learning Development</strong>. 
                 Let's discuss how I can contribute to your team's success.
@@ -166,8 +166,8 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="glass-card p-6 lg:p-8 rounded-xl">
-            <h3 className="text-xl lg:text-2xl font-bold mb-6 text-accent">Send Message</h3>
+          <div className="glass-card p-4 sm:p-6 lg:p-8 rounded-xl">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 lg:mb-6 text-accent">Send Message</h3>
             
             {isSubmitted ? (
               <div className="text-center py-12">
@@ -178,8 +178,8 @@ const Contact = () => {
                 <p className="text-muted-foreground">Thank you for reaching out. I'll get back to you soon.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-2 text-foreground">Name</label>
                     <Input

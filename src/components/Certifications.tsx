@@ -169,29 +169,30 @@ const Certifications = () => {
             return (
               <div 
                 key={achievement.title}
-                className="glass-card p-8 rounded-xl mb-6 hover:scale-105 transition-all duration-300 neon-glow group"
+                className="glass-card p-4 sm:p-6 lg:p-8 rounded-xl mb-6 hover:scale-105 transition-all duration-300 neon-glow group"
               >
-                <div className="flex items-center gap-6">
-                  <div className={`p-4 rounded-xl ${colors.bg} group-hover:scale-110 transition-transform duration-300`}>
-                    <achievement.icon className={`h-8 w-8 ${colors.text}`} />
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                  <div className={`p-3 sm:p-4 rounded-xl ${colors.bg} group-hover:scale-110 transition-transform duration-300`}>
+                    <achievement.icon className={`h-6 w-6 sm:h-8 sm:w-8 ${colors.text}`} />
                   </div>
                   
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                       {achievement.title}
                     </h4>
-                    <p className="text-muted-foreground">
+                    <p className="text-sm sm:text-base text-muted-foreground">
                       {achievement.description}
                     </p>
                   </div>
                   
                   <Button 
                     variant="outline" 
-                    className={`${colors.border} hover:bg-white/10 transition-all duration-300 group/btn`}
+                    size="sm"
+                    className={`w-full sm:w-auto ${colors.border} hover:bg-white/10 transition-all duration-300 group/btn mt-2 sm:mt-0`}
                     onClick={() => window.open(achievement.link, '_blank')}
                   >
                     <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:translate-x-1 transition-transform" />
-                    View Profile
+                    <span className="text-xs sm:text-sm">View Profile</span>
                   </Button>
                 </div>
               </div>
