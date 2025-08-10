@@ -157,23 +157,19 @@ const Chatbot = () => {
             setShowPopup(false);
           }}
           size="lg"
-          className="w-14 h-14 rounded-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg neon-glow group relative overflow-hidden"
+          className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 shadow-lg hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
         >
           {isOpen ? (
-            <X className="h-6 w-6 group-hover:rotate-90 transition-transform duration-300" />
+            <X className="h-6 w-6 text-foreground group-hover:rotate-90 transition-transform duration-300" />
           ) : (
             <div className="relative w-full h-full flex items-center justify-center">
               <img 
                 src={buriIcon} 
                 alt="Buri Buri Zaemon" 
-                className="h-10 w-10 rounded-full object-cover group-hover:scale-110 transition-transform duration-300" 
+                className="h-12 w-12 rounded-full object-cover group-hover:scale-110 transition-transform duration-300 border-2 border-white/30" 
               />
-              <div className="absolute -bottom-1 -right-1 w-7 h-7 bg-secondary rounded-full border-2 border-background flex items-center justify-center overflow-hidden group-hover:scale-125 transition-transform duration-300">
-                <img 
-                  src={buriIcon} 
-                  alt="Chat" 
-                  className="h-9 w-9 rounded-full object-cover transform translate-x-0.5 -translate-y-0.5" 
-                />
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-primary/90 backdrop-blur-sm rounded-full border-2 border-white flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
+                <MessageCircle className="h-3 w-3 text-white" />
               </div>
             </div>
           )}
