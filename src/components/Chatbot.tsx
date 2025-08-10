@@ -173,7 +173,7 @@ const Chatbot = () => {
         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/30 via-transparent to-white/20 animate-pulse"></div>
         
         {isOpen ? (
-          <X className="h-10 w-10 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
+          <X className="h-6 w-6 text-white relative z-10 group-hover:rotate-90 transition-transform duration-300 drop-shadow-lg" />
         ) : (
           <div className="relative z-10 w-full h-full flex items-center justify-center">
             <img 
@@ -181,7 +181,7 @@ const Chatbot = () => {
               alt="Buri Buri Zaemon" 
               className="h-8 w-8 rounded-full object-cover group-hover:scale-110 transition-transform duration-300 border-2 border-white/50 shadow-lg" 
             />
-            <div className="absolute -top--3 -right-3 w-11 h-11 bg-gradient-to-r from-primary to-secondary backdrop-blur-sm rounded-full border-2 border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl animate-pulse-glow">
+            <div className="absolute -top--3 -right-3 w-15 h-15 bg-gradient-to-r from-primary to-secondary backdrop-blur-sm rounded-full border-2 border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl animate-pulse-glow">
               <MessageCircle className="h-8 w-8 text-white drop-shadow-lg animate-bounce" style={{ animationDuration: '2s' }} />
             </div>
           </div>
