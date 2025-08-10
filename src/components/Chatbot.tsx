@@ -163,7 +163,7 @@ const Chatbot = () => {
       <Button
         onClick={toggleChat}
         size="lg"
-        className="w-14 h-14 rounded-full relative overflow-hidden group neural-gradient animate-float neon-glow"
+        className="w-10 h-10 rounded-full relative overflow-hidden group neural-gradient animate-float neon-glow"
       >
         {/* Animated rainbow background */}
         <div className="absolute inset-0 rounded-full neural-gradient opacity-80 animate-spin" style={{ animationDuration: '3s' }}></div>
