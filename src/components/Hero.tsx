@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download, MessageCircle } from "lucide-react";
-import profileImage from "/lovable-uploads/3c45344f-2227-4ffb-8d8f-bcf2fd8cad29.png";
+import profileImage from "/lovable-uploads/5ad578d7-703e-4cf6-86ef-963db495fb85.png";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
