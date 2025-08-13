@@ -7,6 +7,7 @@ import Certifications from "@/components/Certifications";
 import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 import Chatbot from "@/components/Chatbot";
+import WalkingRobots from "@/components/WalkingRobots";
 
 const Index = () => {
   return (
@@ -63,6 +64,9 @@ const Index = () => {
 
       {/* AI Chatbot */}
       <Chatbot />
+      
+      {/* Walking Robots */}
+      <WalkingRobots />
     </div>
   );
 };
