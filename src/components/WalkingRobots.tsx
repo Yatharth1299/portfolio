@@ -1,6 +1,5 @@
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Box, Sphere } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface RobotProps {
@@ -12,6 +11,10 @@ interface RobotProps {
 
 const Robot = ({ position, color, speed, direction }: RobotProps) => {
   const groupRef = useRef<THREE.Group>(null);
+  const leftArmRef = useRef<THREE.Mesh>(null);
+  const rightArmRef = useRef<THREE.Mesh>(null);
+  const leftLegRef = useRef<THREE.Mesh>(null);
+  const rightLegRef = useRef<THREE.Mesh>(null);
   const walkDirection = useRef(direction);
   const currentPosition = useRef(position[0]);
 
@@ -34,75 +37,77 @@ const Robot = ({ position, color, speed, direction }: RobotProps) => {
         groupRef.current.rotation.y = 0;
       }
       
-      // Leg swinging animation
-      const legs = groupRef.current.children.filter(child => 
-        child.userData.type === 'leg'
-      );
-      legs.forEach((leg, index) => {
-        leg.rotation.x = Math.sin(time * 6 + index * Math.PI) * 0.3;
-      });
-      
-      // Arm swinging animation
-      const arms = groupRef.current.children.filter(child => 
-        child.userData.type === 'arm'
-      );
-      arms.forEach((arm, index) => {
-        arm.rotation.x = Math.sin(time * 6 + index * Math.PI + Math.PI) * 0.2;
-      });
+      // Animate limbs
+      if (leftLegRef.current) leftLegRef.current.rotation.x = Math.sin(time * 6) * 0.3;
+      if (rightLegRef.current) rightLegRef.current.rotation.x = Math.sin(time * 6 + Math.PI) * 0.3;
+      if (leftArmRef.current) leftArmRef.current.rotation.x = Math.sin(time * 6 + Math.PI) * 0.2;
+      if (rightArmRef.current) rightArmRef.current.rotation.x = Math.sin(time * 6) * 0.2;
     }
   });
 
   return (
     <group ref={groupRef} position={position}>
       {/* Head */}
-      <Box position={[0, 1.5, 0]} args={[0.4, 0.4, 0.4]} castShadow receiveShadow>
+      <mesh position={[0, 1.5, 0]} castShadow receiveShadow>
+        <boxGeometry args={[0.4, 0.4, 0.4]} />
         <meshLambertMaterial color={color} />
-      </Box>
+      </mesh>
       
       {/* Eyes */}
-      <Sphere position={[-0.1, 1.6, 0.2]} args={[0.05]} castShadow>
+      <mesh position={[-0.1, 1.6, 0.2]} castShadow>
+        <sphereGeometry args={[0.05]} />
         <meshLambertMaterial color="#00ffff" />
-      </Sphere>
-      <Sphere position={[0.1, 1.6, 0.2]} args={[0.05]} castShadow>
+      </mesh>
+      <mesh position={[0.1, 1.6, 0.2]} castShadow>
+        <sphereGeometry args={[0.05]} />
         <meshLambertMaterial color="#00ffff" />
-      </Sphere>
+      </mesh>
       
       {/* Antenna */}
-      <Box position={[0, 1.8, 0]} args={[0.02, 0.2, 0.02]} castShadow>
+      <mesh position={[0, 1.8, 0]} castShadow>
+        <boxGeometry args={[0.02, 0.2, 0.02]} />
         <meshLambertMaterial color="#ffff00" />
-      </Box>
-      <Sphere position={[0, 1.9, 0]} args={[0.03]} castShadow>
+      </mesh>
+      <mesh position={[0, 1.9, 0]} castShadow>
+        <sphereGeometry args={[0.03]} />
         <meshLambertMaterial color="#ff0000" />
-      </Sphere>
+      </mesh>
       
       {/* Body */}
-      <Box position={[0, 0.8, 0]} args={[0.5, 0.8, 0.3]} castShadow receiveShadow>
+      <mesh position={[0, 0.8, 0]} castShadow receiveShadow>
+        <boxGeometry args={[0.5, 0.8, 0.3]} />
         <meshLambertMaterial color={color} />
-      </Box>
+      </mesh>
       
       {/* Arms */}
-      <Box position={[-0.4, 0.9, 0]} args={[0.15, 0.6, 0.15]} userData={{ type: 'arm' }} castShadow>
+      <mesh ref={leftArmRef} position={[-0.4, 0.9, 0]} castShadow>
+        <boxGeometry args={[0.15, 0.6, 0.15]} />
         <meshLambertMaterial color={color} />
-      </Box>
-      <Box position={[0.4, 0.9, 0]} args={[0.15, 0.6, 0.15]} userData={{ type: 'arm' }} castShadow>
+      </mesh>
+      <mesh ref={rightArmRef} position={[0.4, 0.9, 0]} castShadow>
+        <boxGeometry args={[0.15, 0.6, 0.15]} />
         <meshLambertMaterial color={color} />
-      </Box>
+      </mesh>
       
       {/* Legs */}
-      <Box position={[-0.15, 0.1, 0]} args={[0.15, 0.6, 0.15]} userData={{ type: 'leg' }} castShadow>
+      <mesh ref={leftLegRef} position={[-0.15, 0.1, 0]} castShadow>
+        <boxGeometry args={[0.15, 0.6, 0.15]} />
         <meshLambertMaterial color={color} />
-      </Box>
-      <Box position={[0.15, 0.1, 0]} args={[0.15, 0.6, 0.15]} userData={{ type: 'leg' }} castShadow>
+      </mesh>
+      <mesh ref={rightLegRef} position={[0.15, 0.1, 0]} castShadow>
+        <boxGeometry args={[0.15, 0.6, 0.15]} />
         <meshLambertMaterial color={color} />
-      </Box>
+      </mesh>
       
       {/* Feet */}
-      <Box position={[-0.15, -0.15, 0.1]} args={[0.2, 0.1, 0.3]} castShadow>
+      <mesh position={[-0.15, -0.15, 0.1]} castShadow>
+        <boxGeometry args={[0.2, 0.1, 0.3]} />
         <meshLambertMaterial color="#333333" />
-      </Box>
-      <Box position={[0.15, -0.15, 0.1]} args={[0.2, 0.1, 0.3]} castShadow>
+      </mesh>
+      <mesh position={[0.15, -0.15, 0.1]} castShadow>
+        <boxGeometry args={[0.2, 0.1, 0.3]} />
         <meshLambertMaterial color="#333333" />
-      </Box>
+      </mesh>
     </group>
   );
 };
