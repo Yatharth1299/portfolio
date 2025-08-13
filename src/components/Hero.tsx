@@ -12,7 +12,7 @@ const Hero = () => {
 
   const handleDownloadResume = () => {
     // Open Google Drive resume link
-    window.open('https://drive.google.com/file/d/16NSxAS-8Z0OrLbh0VoOEWBOH4bKL4L1P/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1hEQnAkfJML7Vb0d7KM4lSyQeOPKOezkE/view?usp=sharing', '_blank');
   };
 
   const handleReachOut = () => {

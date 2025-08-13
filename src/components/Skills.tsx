@@ -1,4 +1,4 @@
-import { Code, Database, Brain, Users, Wrench } from "lucide-react";
+import { Code, Database, Brain, Users, Wrench, Cloud } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -19,6 +19,12 @@ const Skills = () => {
       title: "AI/LLM Tools",
       color: "accent",
       skills: ["LangChain", "Hugging Face", "Ollama", "DeepSeek", "OpenAI", "CREWAI", "n8n"]
+    },
+    {
+      icon: Cloud,
+      title: "APIs",
+      color: "accent",
+      skills: ["REST API", "Postman API", "LLM API"]
     },
     {
       icon: Wrench,
