@@ -28,7 +28,7 @@ const About = () => {
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed text-foreground">
                   I am a final-year <span className="text-primary font-semibold">Computer Science student</span> at 
-                  Meerut Institute of Engineering & Technology with a <span className="text-secondary font-semibold">CGPA of 8.1</span>, 
+                  Meerut Institute of Engineering & Technology with a <span className="text-secondary font-semibold">CGPA of 8</span>, 
                   complemented by a minor in <span className="text-accent font-semibold">Robotics</span>.
                 </p>
                 
@@ -53,7 +53,7 @@ const About = () => {
                     <GraduationCap className="h-6 w-6 text-primary" />
                     <div>
                       <h3 className="font-semibold text-primary">Education</h3>
-                      <p className="text-sm text-muted-foreground">B.Tech CSE • CGPA: 8.1</p>
+                      <p className="text-sm text-muted-foreground">B.Tech CSE • CGPA: 8</p>
                     </div>
                   </div>
                   

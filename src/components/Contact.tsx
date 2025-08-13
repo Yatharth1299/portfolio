@@ -84,8 +84,9 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      label: "Available",
-      value: "Ready for opportunities",
+      label: "Phone",
+      value: "+917017313154",
+      link: "tel:+917017313154",
       color: "accent"
     }
   ];
@@ -159,7 +160,7 @@ const Contact = () => {
               <h4 className="text-sm sm:text-base font-bold text-accent mb-2 sm:mb-3">Open to Opportunities</h4>
               <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 I'm actively seeking roles in <strong>Generative AI Engineering</strong>, 
-                <strong> AI Research</strong>, and <strong>Machine Learning Development</strong>. 
+                <strong> AI/ML Engineer</strong>, and <strong>Data Science</strong>. 
                 Let's discuss how I can contribute to your team's success.
               </p>
             </div>
