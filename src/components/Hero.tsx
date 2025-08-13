@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-secondary/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      <div className={`container mx-auto px-6 text-center relative z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className={`container mx-auto px-6 text-center relative z-10 transition-all duration-1000 pt-20 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         {/* Profile Image */}
         <div className="mb-8 flex justify-center">
           <div className="relative">
