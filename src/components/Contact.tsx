@@ -72,8 +72,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "yatharthkashyap1488@gmail.com",
-      link: "mailto:yatharthkashyap1488@gmail.com",
+      value: "yk.ai.engineer@gmail.com",
+      link: "mailto:yk.ai.engineer@gmail.com",
       color: "primary"
     },
     {
@@ -85,7 +85,7 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+917017313154",
+      value: "+91 7017313154",
       link: "tel:+917017313154",
       color: "accent"
     }
@@ -159,8 +159,8 @@ const Contact = () => {
             <div className="glass-card p-4 sm:p-6 rounded-xl">
               <h4 className="text-sm sm:text-base font-bold text-accent mb-2 sm:mb-3">Open to Opportunities</h4>
               <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                I'm actively seeking roles in <strong>Generative AI Engineering</strong>, 
-                <strong> AI/ML Engineer</strong>, and <strong>Data Science</strong>. 
+                I'm actively seeking roles in <strong>Backend Engineering</strong>, 
+                <strong> AI/ML Engineering</strong>, and <strong>LLM Engineering</strong>. 
                 Let's discuss how I can contribute to your team's success.
               </p>
             </div>

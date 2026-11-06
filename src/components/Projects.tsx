@@ -1,51 +1,37 @@
-import { ExternalLink, Github, Bot, MapPin, FileText, Shield, Calendar } from "lucide-react";
+import { Github, Bot, FileText, Shield, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Projects = () => {
   const projects = [
     {
-      title: "AI-Powered Email Responder Agent",
-      subtitle: "n8n + OpenAI",
-      description: "Automated email classification and response using n8n, OpenAI API, and webhooks. Reduced manual email processing by 70% via smart routing and summarization logic.",
+      title: "Agentic AI Data Analyst",
+      subtitle: "Python | LangChain | LangGraph | Ollama | Streamlit",
+      description: "Architected an autonomous AI data analyst using a multi-agent architecture and graph-based orchestration to automate analytical workflows. Intelligent agents handle data ingestion, EDA, statistical analysis, visualization, and insight generation, coordinating tasks through tool calling, state management, and multi-step reasoning. Locally hosted LLMs via Ollama reduce dependency on external model APIs, with a Streamlit interface for dataset uploads and contextual insights.",
       icon: Bot,
       color: "primary",
-      tags: ["n8n", "OpenAI", "Automation", "NLP"],
-      impact: "70% reduction in manual processing",
-      github: "#",
-      demo: "#"
+      tags: ["LangChain", "LangGraph", "Ollama", "Pandas", "NumPy", "Streamlit"],
+      impact: "Autonomous multi-agent analytics",
+      github: ""
     },
     {
-      title: "AI Trip Planner Assistant",
-      subtitle: "CREWAI + LangChain + Ollama + DuckDuckGo + Streamlit",
-      description: "Intelligent multi-agent system for personalized travel plans. Integrated real-time search (DuckDuckGo), reasoning via LangChain agents, and deployed via Streamlit. Cut planning time by 80%, with interactive UI and expert-level suggestions.",
-      icon: MapPin,
-      color: "accent",
-      tags: ["CREWAI", "LangChain", "Ollama", "Streamlit"],
-      impact: "80% reduction in planning time",
-      github: "https://github.com/Yatharth1299/AI-Powered-Trip-Planner-by-multi-agents-system",
-      demo: "#"
-    },
-    {
-      title: "Document Chatbot using RAG",
-      subtitle: "LangChain + FAISS + Ollama",
-      description: "Built a chatbot that enables users to ask questions about documents. Used LangChain + FAISS vector DB + Ollama for deep document Q&A. Hosted on Groq backend with a clean Streamlit UI.",
+      title: "RAG-Based Intelligent Q&A System",
+      subtitle: "LangChain + FAISS + DeepSeek + Ollama + Groq",
+      description: "Built an end-to-end Retrieval-Augmented Generation system for document-based question answering. The pipeline covers document ingestion, text chunking, embedding generation, vector indexing, and semantic retrieval. DeepSeek through Ollama and Groq-powered inference generate context-aware answers, while prompt engineering and vector-store reranking improve retrieval relevance — increasing response accuracy by 22%, reducing hallucinations, and delivering 35% faster query responses.",
       icon: FileText,
-      color: "secondary",
-      tags: ["RAG", "FAISS", "LangChain", "Vector DB"],
-      impact: "Intelligent document querying",
-      github: "https://github.com/Yatharth1299/AI_chatbot",
-      demo: "#"
+      color: "accent",
+      tags: ["RAG", "FAISS", "LangChain", "DeepSeek", "Groq", "Streamlit"],
+      impact: "22% higher answer accuracy",
+      github: "https://github.com/Yatharth1299/RAG-Based-AI_chatbot"
     },
     {
       title: "Credit Card Fraud Detection",
       subtitle: "Machine Learning",
-      description: "Developed a supervised learning model (Random Forest + XGBoost) to classify fraudulent transactions. Performed heavy data preprocessing, class balancing (SMOTE), and feature engineering. Achieved 98% precision on synthetic dataset; built Streamlit UI with visual fraud analysis dashboards.",
+      description: "Developed a supervised learning model (Random Forest + XGBoost) to classify fraudulent transactions. Performed heavy data preprocessing, class balancing (SMOTE), and feature engineering. Achieved 98% precision on a synthetic dataset, with a Streamlit UI for visual fraud analysis.",
       icon: Shield,
-      color: "primary",
+      color: "secondary",
       tags: ["Random Forest", "XGBoost", "SMOTE", "Streamlit"],
       impact: "98% precision achieved",
-      github: "https://github.com/Yatharth1299/CreditCard_Fraud_Detection",
-      demo: "#"
+      github: "https://github.com/Yatharth1299/CreditCard_Fraud_Detection"
     }
   ];
 
@@ -92,7 +78,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto mb-4"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Showcase of real-world AI applications and innovative solutions
+            Selected AI applications and backend systems, from agent orchestration to production machine learning
           </p>
         </div>
 
@@ -104,15 +90,15 @@ const Projects = () => {
             return (
               <div 
                 key={project.title}
-                className={`glass-card p-8 rounded-2xl transition-all duration-500 hover:scale-105 ${colors.glow} group`}
+                className={`glass-card p-8 rounded-2xl transition-all duration-500 hover:scale-[1.02] ${colors.glow} group relative`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Project Header */}
                 <div className="flex items-start gap-4 mb-6">
-                  <div className={`p-4 rounded-xl ${colors.icon} group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-4 rounded-xl ${colors.icon} group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                     <project.icon className="h-8 w-8" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
@@ -144,8 +130,8 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-3">
-                  {project.title !== "AI-Powered Email Responder Agent" && (
+                {project.github && (
+                  <div className="flex gap-3">
                     <Button 
                       variant="outline" 
                       size="sm" 
@@ -155,8 +141,8 @@ const Projects = () => {
                       <Github className="h-4 w-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
                       View Code
                     </Button>
-                  )}
-                </div>
+                  </div>
+                )}
 
                 {/* Decorative Elements */}
                 <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full animate-pulse opacity-60"></div>
@@ -171,12 +157,12 @@ const Projects = () => {
           <div className="glass-card p-8 rounded-xl max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 text-primary">Explore More Projects</h3>
             <p className="text-muted-foreground mb-6">
-              Visit my GitHub to see more innovative AI solutions and open-source contributions.
+              Visit my GitHub to see more backend, AI, and open-source work.
             </p>
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 group"
-              onClick={() => window.open('https://github.com/Yatharth1299/Yatharth1299/tree/main', '_blank')}
+              onClick={() => window.open('https://github.com/Yatharth1299', '_blank')}
             >
               <Github className="h-5 w-5 mr-2 group-hover:rotate-12 transition-transform" />
               View All Projects

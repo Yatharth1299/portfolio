@@ -37,7 +37,7 @@ const Achievements = () => {
     {
       icon: Code,
       title: "Real-World AI Tools",
-      value: "4+ Projects",
+      value: "6+ AI Projects",
       description: "Built production-ready AI applications using open-source stacks",
       color: "accent",
       category: "Development"
@@ -165,7 +165,7 @@ const Achievements = () => {
               
               <div className="space-y-3">
                 <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-secondary">
-                  4+
+                  6+
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Production-Ready AI Applications

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download, MessageCircle } from "lucide-react";
-import profileImage from "/lovable-uploads/5ad578d7-703e-4cf6-86ef-963db495fb85.png";
+import profileImage from "/images/profile.png";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,7 +16,7 @@ const Hero = () => {
   };
 
   const handleReachOut = () => {
-    window.open('mailto:yatharthkashyap1488@gmail.com?subject=Let\'s Connect!', '_blank');
+    window.open('mailto:yk.ai.engineer@gmail.com?subject=Let\'s Connect!', '_blank');
   };
 
   return (
@@ -47,26 +47,26 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent neural-gradient text-glow" style={{ color: 'transparent', backgroundClip: 'text', WebkitBackgroundClip: 'text' }}>
           Yatharth
         </h1>
-        <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-8 animate-pulse-glow">
-          Generative AI Engineer
+        <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
+          Backend Engineer
         </h2>
+        <p className="text-lg md:text-xl font-medium text-secondary mb-8 tracking-wide">
+          AI/ML &amp; LLM Engineering
+        </p>
 
         {/* Professional Summary */}
         <div className="max-w-4xl mx-auto mb-8">
           <p className="text-lg md:text-xl text-foreground leading-relaxed">
-            Final-year B.Tech (CSE) student with a strong passion for{" "}
-            <span className="text-primary font-semibold">Artificial Intelligence</span> and{" "}
-            <span className="text-secondary font-semibold">Machine Learning</span>. 
-            Skilled in developing intelligent systems with a focus on{" "}
-            <span className="text-accent font-semibold">prompt engineering</span>,{" "}
-            <span className="text-primary font-semibold">multi-agent architectures</span>, and{" "}
-            <span className="text-secondary font-semibold">large language models</span>. 
-            Experienced in designing and optimizing real-world AI solutions, including{" "}
-            <span className="text-accent font-semibold">chatbots</span>,{" "}
-            <span className="text-primary font-semibold">virtual assistants</span>, and{" "}
-            <span className="text-secondary font-semibold">automated planning systems</span>. 
-            Known for rapid prototyping, performance tuning, and applying innovative approaches to solve complex problems efficiently. 
-            Strong communicator and team player with a keen interest in turning cutting-edge research into impactful applications.
+            Backend Engineer specializing in{" "}
+            <span className="text-primary font-semibold">Python</span>,{" "}
+            <span className="text-secondary font-semibold">FastAPI</span>, and{" "}
+            <span className="text-accent font-semibold">AI-powered applications</span>. 
+            I build RESTful APIs, multi-agent architectures, and{" "}
+            <span className="text-primary font-semibold">RAG pipelines</span> that turn 
+            requirements into working products. Focused on{" "}
+            <span className="text-secondary font-semibold">scalable, reliable backend systems</span>{" "}
+            and end-to-end delivery, from data ingestion and retrieval to{" "}
+            <span className="text-accent font-semibold">LLM-powered workflows</span>.
           </p>
         </div>
 
@@ -103,22 +103,25 @@ const Hero = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="p-4 glass-card neon-glow rounded-full hover:bg-primary/20 transition-all duration-300 group"
+            aria-label="LinkedIn"
           >
             <Linkedin className="h-6 w-6 text-primary group-hover:scale-110 transition-transform" />
           </a>
           <a 
-            href="https://github.com/Yatharth1299/Yatharth1299/tree/main" 
+            href="https://github.com/Yatharth1299" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-4 glass-card neon-glow rounded-full hover:bg-secondary/20 transition-all duration-300 group"
+            aria-label="GitHub"
           >
             <Github className="h-6 w-6 text-secondary group-hover:scale-110 transition-transform" />
           </a>
           <a 
-            href="mailto:yatharthkashyap1488@gmail.com" 
+            href="mailto:yk.ai.engineer@gmail.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-4 glass-card neon-glow rounded-full hover:bg-accent/20 transition-all duration-300 group"
+            aria-label="Email"
           >
             <Mail className="h-6 w-6 text-accent group-hover:scale-110 transition-transform" />
           </a>

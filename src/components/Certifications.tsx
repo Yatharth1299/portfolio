@@ -1,8 +1,35 @@
-import { Award, ExternalLink, CheckCircle, Star } from "lucide-react";
+import { Award, ExternalLink, CheckCircle, Star, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Certifications = () => {
   const certifications = [
+    {
+      title: "Generative AI Professional",
+      issuer: "Oracle",
+      type: "AI/ML",
+      date: "Aug 2025",
+      color: "accent",
+      verified: false,
+      link: ""
+    },
+    {
+      title: "Introduction to Artificial Intelligence",
+      issuer: "IBM",
+      type: "AI/ML",
+      date: "Feb 2025",
+      color: "primary",
+      verified: true,
+      link: "https://www.coursera.org/account/accomplishments/verify/HHFXFP7YO1TO"
+    },
+    {
+      title: "AWS Certified Solutions Architect",
+      issuer: "Udemy",
+      type: "Cloud",
+      date: "Jul 2025",
+      color: "accent",
+      verified: true,
+      link: "https://www.udemy.com/certificate/UC-d317230a-93fd-4d6a-9698-5c16124a76ad/"
+    },
     {
       title: "Prompt Engineering for Generative AI",
       issuer: "IBM",
@@ -28,35 +55,19 @@ const Certifications = () => {
       link: "https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=5098b7a45f16186b64b8f9fedda1792d"
     },
     {
-      title: "Introduction to Artificial Intelligence",
-      issuer: "IBM",
-      type: "AI/ML",
-      color: "primary",
-      verified: true,
-      link: "https://www.coursera.org/account/accomplishments/verify/HHFXFP7YO1TO"
-    },
-    {
       title: "Python Programming",
       issuer: "Coursera",
       type: "Programming",
       color: "secondary",
       verified: true,
       link: "https://www.coursera.org/account/accomplishments/verify/4EGY5OTT6CPK"
-    },
-    {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Udemy",
-      type: "Cloud",
-      color: "accent",
-      verified: true,
-      link: "https://www.udemy.com/certificate/UC-d317230a-93fd-4d6a-9698-5c16124a76ad/"
     }
   ];
 
   const achievements = [
     {
       title: "25+ Google Cloud Skill Badges",
-      description: "Public Profile with comprehensive cloud computing expertise",
+      description: "Public profile with comprehensive cloud computing expertise and Top Leaguer recognition",
       icon: Star,
       color: "primary",
       link: "https://www.cloudskillsboost.google/public_profiles/501f7b2c-1b85-4823-a4c8-40afdddd7b74"
@@ -102,7 +113,7 @@ const Certifications = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto mb-4"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Professional certifications and recognized achievements in AI, Cloud Computing, and Software Development
+            Professional certifications and recognized achievements in AI, cloud computing, and software development
           </p>
         </div>
 
@@ -114,7 +125,7 @@ const Certifications = () => {
             return (
               <div 
                 key={cert.title}
-                className="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 neon-glow group"
+                className="glass-card p-6 rounded-xl hover:scale-105 transition-all duration-300 neon-glow group relative"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Header */}
@@ -137,20 +148,30 @@ const Certifications = () => {
                 <p className={`text-sm font-medium ${colors.text} mb-2`}>
                   {cert.issuer}
                 </p>
-                <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${colors.bg} ${colors.text} border ${colors.border} mb-4`}>
-                  {cert.type}
-                </span>
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${colors.bg} ${colors.text} border ${colors.border}`}>
+                    {cert.type}
+                  </span>
+                  {cert.date && (
+                    <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                      <Calendar className="h-3 w-3" />
+                      {cert.date}
+                    </span>
+                  )}
+                </div>
 
                 {/* Action */}
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className={`w-full ${colors.border} hover:bg-white/10 transition-all duration-300 group/btn`}
-                  onClick={() => window.open(cert.link, '_blank')}
-                >
-                  <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:translate-x-1 transition-transform" />
-                  View Certificate
-                </Button>
+                {cert.link && (
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className={`w-full ${colors.border} hover:bg-white/10 transition-all duration-300 group/btn`}
+                    onClick={() => window.open(cert.link, '_blank')}
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:translate-x-1 transition-transform" />
+                    View Certificate
+                  </Button>
+                )}
 
                 {/* Decorative */}
                 <div className={`absolute top-2 right-2 w-2 h-2 ${colors.bg} rounded-full animate-pulse opacity-60`}></div>
@@ -163,7 +184,7 @@ const Certifications = () => {
         <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-8 text-primary">Special Achievements</h3>
           
-          {achievements.map((achievement, index) => {
+          {achievements.map((achievement) => {
             const colors = getColorClasses(achievement.color);
             
             return (
@@ -206,7 +227,7 @@ const Certifications = () => {
           
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">6+</div>
+              <div className="text-3xl font-bold text-primary">7+</div>
               <div className="text-sm text-muted-foreground">Professional Certificates</div>
             </div>
             <div className="space-y-2">
@@ -218,7 +239,7 @@ const Certifications = () => {
               <div className="text-sm text-muted-foreground">AI/ML Specializations</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">100%</div>
+              <div className="text-3xl font-bold text-primary">6</div>
               <div className="text-sm text-muted-foreground">Verified Credentials</div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Brain, GraduationCap, Cpu } from "lucide-react";
+import { Brain, GraduationCap, Cpu, Briefcase } from "lucide-react";
 
 const About = () => {
   return (
@@ -27,22 +27,23 @@ const About = () => {
               {/* Text Content */}
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed text-foreground">
-                  I am a final-year <span className="text-primary font-semibold">Computer Science student</span> at 
-                  Meerut Institute of Engineering & Technology with a <span className="text-secondary font-semibold">CGPA of 8</span>, 
-                  complemented by a minor in <span className="text-accent font-semibold">Robotics</span>.
+                  I'm a <span className="text-primary font-semibold">Backend Engineer</span> focused on 
+                  Python, API development, and intelligent backend systems. I build RESTful services with{" "}
+                  <span className="text-secondary font-semibold">FastAPI</span> and ship end-to-end AI 
+                  features — from data ingestion and retrieval to agent orchestration — using{" "}
+                  <span className="text-accent font-semibold">LangChain, LangGraph</span>, and vector databases.
                 </p>
                 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  I specialize in building <span className="text-primary">end-to-end AI systems</span> using 
-                  Large Language Models and agent-based tools. My expertise lies in creating 
-                  <span className="text-secondary"> intelligent, scalable, real-world solutions</span> with 
-                  open-source tools and APIs.
+                  Alongside my degree I've worked as a{" "}
+                  <span className="text-primary">Generative AI Engineer</span> and{" "}
+                  <span className="text-secondary">AI Engineer</span>, building voice-based conversational 
+                  agents, RAG pipelines, and LLM-powered automation for real applications.
                 </p>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  My passion for <span className="text-accent">Artificial Intelligence</span> drives me to 
-                  continuously explore cutting-edge technologies and transform complex problems into 
-                  elegant, efficient solutions.
+                  I care about <span className="text-accent">scalable architecture, clean APIs, and testing</span>, 
+                  and I enjoy taking products from an initial concept to a reliable working implementation.
                 </p>
               </div>
 
@@ -53,7 +54,8 @@ const About = () => {
                     <GraduationCap className="h-6 w-6 text-primary" />
                     <div>
                       <h3 className="font-semibold text-primary">Education</h3>
-                      <p className="text-sm text-muted-foreground">B.Tech CSE • CGPA: 8</p>
+                      <p className="text-sm text-muted-foreground">B.Tech CSE • CGPA: 8.2/10</p>
+                      <p className="text-xs text-muted-foreground">Jun 2022 – Jun 2026</p>
                     </div>
                   </div>
                   
@@ -61,15 +63,23 @@ const About = () => {
                     <Brain className="h-6 w-6 text-secondary" />
                     <div>
                       <h3 className="font-semibold text-secondary">Specialization</h3>
-                      <p className="text-sm text-muted-foreground">AI/ML & Robotics</p>
+                      <p className="text-sm text-muted-foreground">AI/ML • Minor in Robotics</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <Briefcase className="h-6 w-6 text-accent" />
+                    <div>
+                      <h3 className="font-semibold text-accent">Experience</h3>
+                      <p className="text-sm text-muted-foreground">Backend & Gen AI Engineering</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-3">
-                    <Cpu className="h-6 w-6 text-accent" />
+                    <Cpu className="h-6 w-6 text-primary" />
                     <div>
-                      <h3 className="font-semibold text-accent">Focus</h3>
-                      <p className="text-sm text-muted-foreground">LLM & Multi-Agent Systems</p>
+                      <h3 className="font-semibold text-primary">Focus</h3>
+                      <p className="text-sm text-muted-foreground">APIs, RAG & Multi-Agent Systems</p>
                     </div>
                   </div>
                 </div>

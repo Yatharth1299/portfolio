@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MessageCircle, X, Send, User } from "lucide-react";
 
-const buriIcon = "/lovable-uploads/bb4adc58-e102-411d-8f24-1a9407529348.png";
+const buriIcon = "/images/chatbot-avatar.png";
 
 interface ChatMessage {
   id: number;
@@ -30,19 +30,19 @@ const Chatbot = () => {
 
   // Knowledge base with exact same content
   const knowledgeBase = {
-    skills: "Yatharth is proficient in Python, C++, with extensive experience in AI libraries like Pandas, NumPy, PyTorch, and Scikit-learn. He specializes in AI tools including LangChain, Hugging Face, Ollama, OpenAI, CREWAI, and n8n. He's also skilled with development tools like GitHub, VS Code, Jupyter Notebook, and Streamlit.",
+    skills: "Yatharth is a Backend Engineer proficient in Python, JavaScript, SQL, C++, and C. He builds APIs with FastAPI and works with LangChain, LangGraph, LangSmith, RAG, multi-agent systems, MCP, and vector databases like FAISS. His ML toolkit includes Scikit-learn, PyTorch, TensorFlow, Pandas, and NumPy, and he works with Ollama, Groq, DeepSeek, Hugging Face, Claude, Mistral, and AWS Bedrock.",
     
-    projects: "Yatharth has built several impressive AI projects: 1) AI-Powered Email Responder Agent using n8n and OpenAI that reduced manual processing by 70%, 2) AI Trip Planner Assistant with CREWAI and LangChain that cut planning time by 80%, 3) Document Chatbot using RAG with LangChain and FAISS, and 4) Credit Card Fraud Detection with 98% precision using Random Forest and XGBoost.",
+    projects: "Yatharth's featured projects: 1) Agentic AI Data Analyst — a multi-agent system built with LangGraph, Ollama, and Streamlit that automates data ingestion, EDA, statistical analysis, visualization, and insight generation. 2) RAG-Based Intelligent Q&A System — a LangChain + FAISS pipeline with DeepSeek and Groq inference that improved answer accuracy by 22% and made queries 35% faster. 3) Credit Card Fraud Detection — a Random Forest + XGBoost model with 98% precision.",
     
-    education: "Yatharth is a final-year B.Tech Computer Science student at Meerut Institute of Engineering & Technology with a CGPA of 8.1 and a minor in Robotics.",
+    education: "Yatharth completed his B.Tech in Computer Science and Engineering at Meerut Institute of Engineering & Technology from June 2022 to June 2026 with a CGPA of 8.2/10, along with a minor specialization in Robotics.",
     
-    certifications: "He holds multiple certifications including Prompt Engineering for Generative AI from IBM, MongoDB certification, AICTE Generative AI Internship, AWS Solutions Architect, Python Programming from Coursera, and 25+ Google Cloud Skill Badges.",
+    certifications: "He holds certifications including Oracle Generative AI Professional, IBM Introduction to Artificial Intelligence, IBM Prompt Engineering for Generative AI, AWS Certified Solutions Architect from Udemy, MongoDB, the AICTE Generative AI Internship, and Python Programming from Coursera, plus 25+ Google Cloud Skill Badges with Top Leaguer recognition.",
     
-    achievements: "Notable achievements include CoCubes Test Score of 603/800, AINCAT 2025 Rank 17343, Google Cloud Top League with 25+ skill badges, AICTE certified Gen AI intern, and building 4+ real-world AI tools.",
+    achievements: "Notable achievements include a CoCubes Test Score of 603/800, AINCAT 2025 Rank 17343, Google Cloud Top League with 25+ skill badges, AICTE certified Gen AI intern, and building 6+ real-world AI tools.",
     
-    contact: "You can reach Yatharth at yatharthkashyap1488@gmail.com. He's also available on LinkedIn and GitHub. He typically responds within 24 hours and is open to collaboration opportunities.",
+    contact: "You can reach Yatharth at yk.ai.engineer@gmail.com or on +91 7017313154. He's also available on LinkedIn and GitHub and typically responds within 24 hours.",
     
-    experience: "Yatharth specializes in building end-to-end AI systems using LLMs and multi-agent architectures. He's known for rapid prototyping, model optimization, and creating scalable real-world AI solutions using open-source tools and APIs."
+    experience: "Yatharth worked as a Generative AI Engineer at WebSoulLab from February to August 2025, building FastAPI backend services and a LangGraph voice agent with Whisper ASR and TTS. Since August 2025 he has been an AI Engineer at Extension Technology, developing REST APIs, LLM workflows, and AI-powered automation."
   };
 
   const scrollToBottom = () => {
@@ -89,11 +89,11 @@ const Chatbot = () => {
     }
     
     if (message.includes("ai") || message.includes("artificial intelligence") || message.includes("machine learning")) {
-      return "Yatharth is passionate about AI and ML! He specializes in Generative AI, LLM development, and multi-agent systems. He's worked with cutting-edge tools like LangChain, OpenAI, Ollama, and CREWAI to build intelligent applications that solve real-world problems.";
+      return "Yatharth is passionate about AI and backend engineering! He specializes in LLM applications, RAG pipelines, and multi-agent systems, and has worked with tools like LangChain, LangGraph, FastAPI, Ollama, and Groq to build intelligent applications that solve real-world problems.";
     }
     
     if (message.includes("job") || message.includes("opportunity") || message.includes("hire") || message.includes("position")) {
-      return "Yatharth is actively seeking opportunities in Generative AI Engineering, AI Research, and Machine Learning Development. He's available for full-time positions and is open to collaborating on innovative AI projects. Feel free to reach out to him at yatharthkashyap1488@gmail.com!";
+      return "Yatharth is actively seeking opportunities in Backend Engineering, AI/ML Engineering, and LLM Engineering. He's available for full-time positions and is open to collaborating on innovative AI projects. Feel free to reach out to him at yk.ai.engineer@gmail.com!";
     }
     
     return "I'd be happy to help you learn more about Yatharth! You can ask me about his technical skills, AI projects, educational background, certifications, achievements, or how to get in touch with him. What specific information are you looking for?";

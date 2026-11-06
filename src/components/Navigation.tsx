@@ -1,21 +1,22 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, User, Code, Briefcase, Award, Trophy, Mail } from "lucide-react";
+import { Menu, X, Home, User, Code, Briefcase, Award, Trophy, Mail, Building2 } from "lucide-react";
+
+const navigationItems = [
+  { id: "hero", label: "Home", icon: Home },
+  { id: "about", label: "About", icon: User },
+  { id: "experience", label: "Experience", icon: Building2 },
+  { id: "skills", label: "Skills", icon: Code },
+  { id: "projects", label: "Projects", icon: Briefcase },
+  { id: "certifications", label: "Certifications", icon: Award },
+  { id: "achievements", label: "Achievements", icon: Trophy },
+  { id: "contact", label: "Contact", icon: Mail }
+];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const navigationItems = [
-    { id: "hero", label: "Home", icon: Home },
-    { id: "about", label: "About", icon: User },
-    { id: "skills", label: "Skills", icon: Code },
-    { id: "projects", label: "Projects", icon: Briefcase },
-    { id: "certifications", label: "Certifications", icon: Award },
-    { id: "achievements", label: "Achievements", icon: Trophy },
-    { id: "contact", label: "Contact", icon: Mail }
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +69,7 @@ const Navigation = () => {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-1">
               {navigationItems.map((item) => (
                 <Button
                   key={item.id}
@@ -91,7 +92,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden"
+              className="lg:hidden"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -101,7 +102,7 @@ const Navigation = () => {
       </nav>
 
       {/* Mobile Navigation */}
-      <div className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
+      <div className={`fixed inset-0 z-50 lg:hidden transition-all duration-300 ${
         isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}>
         {/* Backdrop */}
